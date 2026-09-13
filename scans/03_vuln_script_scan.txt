@@ -1,0 +1,28 @@
+$ nmap --script vuln scanme.nmap.org
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-09-12 14:46 EDT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.24s latency).
+Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
+Not shown: 996 filtered tcp ports (no-response)
+PORT      STATE SERVICE
+22/tcp    open  ssh
+80/tcp    open  http
+| http-csrf:
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=scanme.nmap.org
+|   Found the following possible CSRF vulnerabilities:
+|
+|     Path: http://scanme.nmap.org:80/
+|     Form id: nst-head-search
+|     Form action: /search/
+|
+|     Path: http://scanme.nmap.org:80/
+|     Form id: nst-foot-search
+|_    Form action: /search/
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum:
+|_  /images/: Potentially interesting directory w/ listing on 'apache/2.4.7 (ubuntu)'
+9929/tcp  open  nping-echo
+31337/tcp open  Elite
+
+Nmap done: 1 IP address (1 host up) scanned in 129.47 seconds
