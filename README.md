@@ -37,6 +37,7 @@ nmap-recon-scanme/
 - Directory listing is turned on for `/images/`
 
 Full details are in [report/scan-report.md](report/scan-report.md).
+See screenshots/ for terminal and browser evidence from these scans.
 
 **Skills practiced:** port scanning, service/version enumeration, reading NSE script output, distinguishing confirmed findings from possible/automated flags.
 
